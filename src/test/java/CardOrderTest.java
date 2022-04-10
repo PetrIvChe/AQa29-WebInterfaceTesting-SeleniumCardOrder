@@ -8,15 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
-
-
-
 
 public class CardOrderTest {
     private WebDriver driver;
@@ -25,8 +21,10 @@ public class CardOrderTest {
     static void setUpDriver() {
         System.setProperty("webdriver.chrome.driver", "/driver/win/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
-    }
+        //System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
 
+
+    }
 
 
     @BeforeEach
