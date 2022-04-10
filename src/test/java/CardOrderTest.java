@@ -1,3 +1,4 @@
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,14 +9,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.List;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CardOrderTest {
     private WebDriver driver;
 
     @BeforeAll
     static void setUpDriver() {
+        System.setProperty("webdriver.chrome.driver", "/driver/win/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
         //System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
 
@@ -163,6 +167,5 @@ public class CardOrderTest {
         assertEquals(expected, actual);
     }
 
-    private static class WebDriverManager {
-    }
+
 }
